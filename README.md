@@ -84,3 +84,72 @@ playerTab:CreateSlider({
 })
 ```
 
+# Create a text Label!
+I dont know why anyone would use this but here
+```lua
+tab:CreateLabel({
+    Name = "MyNameForLabel",  -- name for label (not shown on the UI)
+    Text = "My text!"  -- text
+})
+```
+
+# lets create a textbox!
+
+This is for non skids:
+```lua
+tab:CreateTextBox({
+    Name = "SampleTextBox", -- text beside
+    Default = "Enter text here", -- default text in textbox
+    Callback = function(text)
+        print("Text entered: " .. text) -- put your function here
+    end
+})
+```
+
+
+This is an example to teleport to a specific username:
+```lua
+tab:CreateTextBox({
+    Name = "Teleport to Player",
+    Default = "Enter player name",
+    Callback = function(text)
+        print("Teleporting to: " .. text)
+        local targetPlayer = Players:FindFirstChild(text)
+        if targetPlayer and targetPlayer.Character then
+            player.Character.HumanoidRootPart.CFrame = targetPlayer.Character.HumanoidRootPart.CFrame
+        else
+            print("Player not found: " .. text)
+        end
+    end
+})
+```
+
+
+# CREATE A TOGGLE
+```lua
+tab:CreateToggle({
+    Name = "MyToggle", -- name of toggle
+    Default = false, -- leave this, dont change true
+    Callback = function(state)
+        print("Toggle state changed to: " .. tostring(state)) -- your function when true (AKA when toggled on)
+    end
+})
+```
+
+# AND FINALLY, CREATING A BUTTON
+```lua
+tab:CreateButton({
+    Name = "SampleButton", -- button name
+    Size = "Large", -- large, small
+    Callback = function()
+        print("Button clicked!") -- function when putton clicked
+    end
+})
+```
+# WHAT CAN BE EXPECTED IN THE FUTURE? 
+-drop down
+-color picker
+
+
+[JOIN THE DISCORD](https://discord.gg/FRTku6V8DS)
+[ADD ME ON DISCORD!](https://discord.com/users/1104948638570004553)
