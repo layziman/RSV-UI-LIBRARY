@@ -64,6 +64,7 @@ tab:CreateSlider({
 ```
 You can change values to prefered 
 
+For example, his code is a slider to change walkspeed
 ```lua
 local player = game.Players.LocalPlayer
 local character = player.Character or player.CharacterAdded:Wait()
@@ -83,4 +84,3 @@ playerTab:CreateSlider({
 })
 ```
 
-For all yall non skids, this is what you can use to make a normal slider
