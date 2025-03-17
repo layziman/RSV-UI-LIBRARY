@@ -2,6 +2,7 @@
 Hey there! Thank you for using my library! You want to go into your executor and paste the following:
 ```lua
 local RSV = loadstring(game:HttpGet("https://raw.githubusercontent.com/layziman/RSV-UI-LIBRARY/refs/heads/main/RSVGUI.lua"))()
+```
 What that did is grab the core functions used for the UI.
 ![image](https://github.com/user-attachments/assets/41b8aa40-981a-4a2c-9e6f-aed5258c42f2)
 
@@ -14,6 +15,7 @@ local window = RSV:CreateWindow({
     Theme = "Ocean",  -- ocean theme (my favorite!)
     Credits = "MyName"  -- your name
 })
+```
 
 # THEMES
 We currently have 5 themes:
@@ -35,6 +37,7 @@ Ok, now is where it gets special. To create a tab, you want the paste the follow
 
 ```lua 
 local tab = window:CreateTab("TabName", "TabDescription")
+```
 
 
 You can change "tab" the variable name to anything! Same with description and TabName.
