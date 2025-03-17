@@ -487,7 +487,7 @@ function RSV:CreateWindow(options)
 
         function tab:CreateButton(options)
             local name = options.Name or "Button"
-            local size = options.Size or "Large" -- Default to "Large"
+            local size = options.Size or "Large"
             local callback = options.Callback or function() end
 
             local buttonFrame = Instance.new("Frame")
@@ -630,7 +630,7 @@ function RSV:CreateWindow(options)
             TweenService:Create(bottomBar, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -bottomBar.Size.X.Offset / 2, 1, -60)}):Play()
         else
             TweenService:Create(mainFrame, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0, -350, 0, 50)}):Play()
-            TweenService:Create(bottomBar, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -bottomBar.Size.X.Offset / 2, 1, 10)}):Play()
+            TweenService:Create(customBar, TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Position = UDim2.new(0.5, -bottomBar.Size.X.Offset / 2, 1, 10)}):Play()
         end
     end
 
@@ -782,3 +782,5 @@ function RSV:CreateWindow(options)
 
     return window
 end
+
+return RSV
