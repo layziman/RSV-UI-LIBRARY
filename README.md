@@ -45,3 +45,42 @@ For now, I will call it "PlayerTab"
 ![image](https://github.com/user-attachments/assets/c7692b7c-a458-4100-a715-39bea462d128)
 
 
+
+# adding sliders
+Lets add a slider to our code. 
+
+
+For all yall non skids, this is what you can use to make a normal slider
+```lua
+tab:CreateSlider({
+    Name = "MySlider",  
+    Min = 16,            
+    Max = 100,           
+    Default = 16,         
+    Callback = function(value)  
+        print(value)
+    end
+})
+```
+You can change values to prefered 
+
+```lua
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:FindFirstChild("Humanoid")
+local currentWalkSpeed = 16
+playerTab:CreateSlider({
+    Name = "Walk Speed",  -- label for slider
+    Min = 16,             -- min on slider
+    Max = 100,            -- max on slider
+    Default = 16,         -- start on
+    Callback = function(value)  
+        currentWalkSpeed = value  
+        if humanoid then
+            humanoid.WalkSpeed = value  
+        end
+    end
+})
+```
+
+For all yall non skids, this is what you can use to make a normal slider
